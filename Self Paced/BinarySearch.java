@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main{
+public class BinarySearch{
     public static void main(String args[]){
         System.out.print("Enter the number of Element in the array: ");
         Scanner input = new Scanner (System.in);
