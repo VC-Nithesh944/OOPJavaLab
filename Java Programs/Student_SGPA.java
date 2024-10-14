@@ -78,7 +78,7 @@ class Stud_details {
     }
 }
 
-public class Student{
+public class Student_SGPA{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int n;
