@@ -1,17 +1,15 @@
-package Practice;
 
 import java.util.Scanner;
 
 class Stud_details {
-    public int marks[] = new int[6];
-    public int credit[] = new int[6];
+    int marks[] = new int[6];
+    int credit[] = new int[6];
     String usn, name;
     int credits=0;
-    public double sgpa;
+    double sgpa;
     Scanner input = new Scanner(System.in);
 
     void getDetails() {
-        System.out.println("Enter the details: ");
         System.out.print("Enter the name: ");
         name = input.next();
         System.out.print("Enter the Usn: ");
@@ -64,7 +62,6 @@ class Stud_details {
             }
             sgpa += points[i];
         }
-        // Calculating SGPA with correct typecasting to avoid integer division
         sgpa = (double) sgpa/credits;
         return sgpa;
     }
@@ -83,16 +80,20 @@ class Stud_details {
 
 public class Student{
     public static void main(String[] args) {
-        Stud_details s[] = new Stud_details[3];  // Array for 3 students
+        Scanner input = new Scanner(System.in);
+        int n;
+        System.out.print("Enter the Number of Students you want to read marks of: ");
+        n= input.nextInt();
+        Stud_details s[] = new Stud_details[n];  // Array for 3 students
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println("Enter the details of student " + (i + 1) + ":");
             s[i] = new Stud_details();
             s[i].getDetails();
         }
 
         // Displaying details of all students
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println("\nDisplaying details of student " + (i + 1) + ":");
             s[i].display();
         }
