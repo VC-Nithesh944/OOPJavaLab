@@ -20,6 +20,7 @@ class Book{
         System.out.println("Author: "+author.toString());
         System.out.println("Price: "+Price.toString());
         System.out.println("Number of pages: "+num_pages.toString());
+        System.out.println();
     }
 }
 
@@ -30,7 +31,7 @@ class BookDemo{
         int n = input.nextInt();
         Book books[] = new Book[n];
         for(int i=0;i<n;i++){
-            System.out.println("Enter Book"+(i+1)+" details");
+            System.out.println("\nEnter Book"+(i+1)+" details");
             books[i] = new Book();
         }
         System.out.println("\nThe Details of the books are: ");
