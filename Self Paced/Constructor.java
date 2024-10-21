@@ -4,7 +4,7 @@ class Demo{
     A obj1 = new A();                                                    //calls the constructor with no parameters
     System.out.println("The volume of Object 1 is: "+obj1.volume());
     
-    A obj2 = new A(10,20,30);                                            //calls the constructor with three paramenters
+    A obj2 = new A(10,20,30);                                            //calls the constructor with three parameters
     System.out.println("The volume of object 2 is : "+obj2.volume());
 
     A obj3 = new A(obj2);                                                //calls the constructor with obj as parameters
@@ -21,13 +21,13 @@ class A{
     height = 10;
   }
   
-  A(int length, int breadth, int height){  //Constructor with paramenter --> Here this. operator is used because 
+  A(int length, int breadth, int height){  //Constructor with parameter --> Here this. operator is used because 
     this.length = length;                  //they have the same name for instance and parameter variables
     this.breadth = breadth;
     this.height = height;
   }
 
-  A(A ob){                                 //Constuctor with parameter as another object
+  A(A ob){                                 //Constructor with parameter as another object
     length = ob.length;
     breadth = ob.breadth;
     height = ob.height;

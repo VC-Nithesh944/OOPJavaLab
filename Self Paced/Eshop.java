@@ -26,7 +26,7 @@ public class Eshop{
 
 class EshopDemo{
     public static void main(String[] args) {
-        Parse item1= new Parse();
+        Eshop item1 = new Eshop();
         item1.accept();
         item1.calculate();
         item1.display();
