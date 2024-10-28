@@ -39,7 +39,7 @@ class SavingsAccount extends Account {
 
     void FinalBalance(int years) {
     double finalAmount = this.balance * Math.pow((1 + interest), years);
-    System.out.println("The final balance after " + years + " years is: " + finalAmount);
+    System.out.println(String.format("The final balance after %d is: %.2f", years,finalAmount));
     }
 
 }
