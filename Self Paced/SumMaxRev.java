@@ -1,41 +1,30 @@
 
-import java.util.Scanner;
+import java.util.ArrayList;
+
+
 
 public class SumMaxRev {
     public static void main(String[] args) {
-        System.out.print("Enter the size of array: ");
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int arr[] = new int [n];
-        System.out.println("Enter the elements of the array: ");
-        for (int i = 0 ; i < arr.length; i++){
-            System.out.print(String.format("Enter the %d element : ",(i+1)));
-            arr[i] = input.nextInt();
-        }
+        double d = 18924839483.40823348;
+        float f = (float)d;
+        System.out.println("The value of f is : "+f);
 
-        System.out.print("The elements of the array are: ");
-        for (int i = 0 ; i < arr.length ; i++){
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+        char a = 'a';
+        int asciiValue = (int)a;
+        System.out.println("The ascii value of A is: "+asciiValue);
 
-        int sum = 0 ; 
-        int max = arr[arr.length-1] ;
-        int revarr[] = new int[arr.length];
+        int c = 10 ,b = 7;
+        double result = (double) c/b;
+        System.out.println(String.format("The result is: %.2f",result));
+        
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Mango");
 
-        for (int i = arr.length-1; i>=0;i--){
-            sum += arr[i];
-            if (max<arr[i])
-                max = arr[i];
-            revarr[arr.length-i-1] = arr[i];
+        for (String fruit : fruits){
+            System.out.print(" "+fruit);
         }
-
-        System.out.print("The sum of all elements of the array is : "+ sum+"\n");
-        System.out.print("The max element in the array is : "+max+"\n");
-        System.out.print("The element of the rev array is: ");
-        for (int i = 0 ; i<revarr.length; i++){
-            System.out.print(revarr[i] + " ");
-        }
-        System.out.println();
     }
 }
